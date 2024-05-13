@@ -118,33 +118,44 @@ const FeedbackForm = () => {
 
       return <form id="gh-feedback-form" onSubmit={handleSubmit}>
       <h1>Issue Report</h1>
+      
       <input hidden type="text" name="repo" value={formValues.repo} onChange={handleChange} />
       <input hidden type="text" name="owner" value={formValues.owner} onChange={handleChange} />
+    
       <div>
-          <label htmlFor="gh-feedback-type">Type</label>
-          <div className="flex flex-row">
-            <div className="px-5"><input type="radio" name="type" value="bug" checked={formValues.type === "bug"} onChange={handleChange}/><span className="mx-2">Bug</span></div>
-            <div className="px-5"><input type="radio" name="type" value="feedback" checked={formValues.type === "feedback"} onChange={handleChange}/><span className="mx-2">Feedback</span></div>
+        <label htmlFor="gh-feedback-type">Type</label>
+        <div className="flex flex-row">
+          <div className="px-5">
+            <input type="radio" name="type" value="bug" checked={formValues.type === "bug"} onChange={handleChange}/>
+            <span className="mx-2">Bug</span>
           </div>
+          <div className="px-5">
+            <input type="radio" name="type" value="feedback" checked={formValues.type === "feedback"} onChange={handleChange}/>
+            <span className="mx-2">Feedback</span>
+          </div>
+        </div>
       </div>
+    
       <div>
         <label htmlFor="gh-feedback-title">Issue Name</label>
         <input type="text" id="gh-feedback-title" name="title" required placeholder="Briefly explain..." value={ formValues.title } onChange={handleChange}/>
       </div>
+    
       <div>
         <label htmlFor="gh-feedback-email">Your Email</label>
         <input type="email" id="gh-feedback-sender-email" name="email" required placeholder="Type your email..." value={ formValues.email } onChange={handleChange}/>
       </div>
+    
       <div>
         <label htmlFor="gh-feedback-comment">Comment</label>
         <textarea id="gh-feedback-comment" name="comment" required placeholder="Description..." value={ formValues.comment } onChange={handleChange}/>
       </div>
+    
       <div>
         <input id="gh-btn-submit" className="inline-block btn-submit-enabled" type="submit" value="Send"/>
         <span id="txt-prompt" className="inline-block px-3"></span>
       </div>
-
-    </form>;
+    </form>
 }
 
 export default FeedbackForm
