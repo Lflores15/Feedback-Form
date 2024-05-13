@@ -118,7 +118,7 @@ const FeedbackForm = () => {
       }
 
       return (
-         <div className="min-h-screen bg-white dark:bg-neutral-950">
+         <div className="min-h-screen bg-white dark:bg-neutral-900">
          <div className="bg-white dark:bg-neutral-900 rounded-lg px-6 py-8">
       <form id="gh-feedback-form" onSubmit={handleSubmit}>
         <h1 className="text-slate-900 dark:text-white">Issue Report</h1>
