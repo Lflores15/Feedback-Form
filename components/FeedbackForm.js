@@ -137,7 +137,7 @@ const FeedbackForm = () => {
         </div>
         <div>
           <label htmlFor="gh-feedback-email" className="text-slate-900 dark:text-white">Your Email</label>
-          <input type="email" id="gh-feedback-sender-email" name="email" required placeholder="Type your email..." value={ formValues.email } onChange={handleChange} className="bg-white dark:bg-neutral-800 text-slate-900 dark:text-white"/>
+          <input type="email" id="gh-feedback-sender-email" name="email"  required placeholder="Type your email..." value={ formValues.email } onChange={handleChange} className="bg-white dark:bg-neutral-800 text-slate-900 dark:text-white"/>
         </div>
         <div>
           <label htmlFor="gh-feedback-comment" className="text-slate-900 dark:text-white">Comment</label>
