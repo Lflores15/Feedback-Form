@@ -34,7 +34,9 @@ body {
     @apply w-full leading-10
   }
 
-  
+  #gh-feedback-form > div > label {
+    @apply block font-semibold text-gray-700 dark:text-white
+  }
   
 
 }
